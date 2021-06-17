@@ -1,0 +1,321 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#222121"
+    tools:context=".MainActivity">
+
+<!--    The following 2 relative layouts will make our app responsive-->
+<!--    Horizontal line as reference line -->
+   <RelativeLayout
+       android:layout_width="match_parent"
+       android:layout_height="wrap_content"
+       android:layout_centerVertical="true"
+       android:id="@+id/centerHorizontalLineId"/>
+
+<!--    Vertical line as reference line-->
+    <RelativeLayout
+        android:layout_width="wrap_content"
+        android:layout_height="match_parent"
+        android:layout_centerHorizontal="true"
+        android:id="@+id/centerVerticalLineId"/>
+
+    <RelativeLayout
+        android:id="@+id/maleId"
+        android:layout_width="150dp"
+        android:layout_height="150dp"
+        android:layout_toStartOf="@id/centerVerticalLineId"
+        android:background="@drawable/male_female_not_focus"
+        android:layout_above="@id/heightLayoutId"
+        android:layout_marginBottom="35dp"
+        android:layout_marginLeft="20dp"
+        android:layout_marginRight="20dp">
+        <ImageView
+            android:layout_width="170px"
+            android:layout_height="170px"
+            android:layout_marginBottom="25dp"
+            android:src="@drawable/male"
+            android:layout_centerInParent="true"/>
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Male"
+            android:textSize="20sp"
+            android:textStyle="bold"
+            android:textColor="#ffffff"
+            android:layout_alignParentBottom="true"
+            android:layout_marginBottom="10dp"
+            android:textAlignment="center" />
+
+    </RelativeLayout>
+
+    <RelativeLayout
+        android:id="@+id/femaleId"
+        android:layout_width="150dp"
+        android:layout_height="150dp"
+        android:layout_toEndOf="@id/centerVerticalLineId"
+        android:background="@drawable/male_female_not_focus"
+        android:layout_above="@id/heightLayoutId"
+        android:layout_marginBottom="35dp"
+        android:layout_marginLeft="20dp"
+        android:layout_marginRight="20dp">
+        <ImageView
+            android:layout_width="170px"
+            android:layout_height="170px"
+            android:layout_marginBottom="2dp"
+            android:src="@drawable/female"
+            android:layout_centerInParent="true"/>
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Female"
+            android:textSize="20sp"
+            android:textStyle="bold"
+            android:textColor="#ffffff"
+            android:layout_alignParentBottom="true"
+            android:layout_marginBottom="10dp"
+            android:textAlignment="center" />
+
+    </RelativeLayout>
+
+    <!--        creating fix-your-height Layout-->
+        <RelativeLayout
+            android:id="@+id/heightLayoutId"
+            android:layout_width="340dp"
+            android:layout_height="150dp"
+            android:layout_above="@id/centerHorizontalLineId"
+            android:layout_marginBottom="-50dp"
+            android:layout_marginLeft="25dp"
+            android:layout_marginRight="25dp"
+            android:layout_centerHorizontal="true"
+            android:background="@drawable/card_background">
+
+<!--            in side this layout we will have 3 text-view -->
+<!--            and one seekBar-->
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:textAlignment="center"
+                android:text="Height"
+                android:textSize="13sp"
+                android:textColor="#ffffff"
+                android:textStyle="bold"
+                android:layout_marginTop="8dp"/>
+            <Button
+                android:id="@+id/micOfHeight"
+                android:layout_width="40dp"
+                android:layout_height="40dp"
+                android:text="Mic"
+                android:background="@drawable/button_background"
+                android:layout_marginTop="5dp"
+                android:layout_marginLeft="5dp"/>
+
+            <TextView
+                android:id="@+id/currentHeightId"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="170"
+                android:textSize="35sp"
+                android:textStyle="bold"
+                android:textColor="#ffffff"
+                android:layout_marginBottom="50dp"
+                android:layout_alignParentBottom="true"
+                android:layout_centerInParent="true"/>
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="cm"
+                android:textStyle="bold"
+                android:textSize="20sp"
+                android:textColor="#ffffff"
+                android:layout_centerInParent="true"
+                android:layout_toEndOf="@id/currentHeightId"
+                android:layout_marginStart="20dp"/>
+
+            <SeekBar
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_alignParentBottom="true"
+                android:layout_marginBottom="20dp"
+                android:layout_marginLeft="10dp"
+                android:layout_marginRight="10dp"
+                android:progressTint="#EA6868"
+                android:thumbTint="#ffffff"
+                android:id="@+id/seekBarId"/>
+
+        </RelativeLayout>
+
+        <RelativeLayout
+            android:id="@+id/weightLayoutId"
+            android:layout_width="150dp"
+            android:layout_height="150dp"
+            android:layout_toStartOf="@id/centerVerticalLineId"
+            android:layout_below="@id/heightLayoutId"
+            android:layout_marginBottom="20dp"
+            android:layout_marginTop="85dp"
+            android:layout_marginLeft="20dp"
+            android:layout_marginRight="20dp"
+            android:background="@drawable/card_background">
+            <TextView
+                android:id="@+id/textWeight"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Weight"
+                android:layout_marginLeft="30dp"
+                android:textColor="#ffffff"
+                android:textStyle="bold"
+                android:textAlignment="center"
+                android:textSize="18sp"
+                android:layout_marginTop="15dp"/>
+            <Button
+                android:id="@+id/micOfWeight"
+                android:layout_width="40dp"
+                android:layout_height="40dp"
+                android:text="Mic"
+                android:background="@drawable/button_background"
+                android:layout_marginTop="5dp"
+                android:layout_marginLeft="5dp"/>
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:id="@+id/currentWeightId"
+                android:text="55"
+                android:textColor="#ffffff"
+                android:textSize="30sp"
+                android:textStyle="bold"
+                android:layout_centerInParent="true"
+                android:textAlignment="center"/>
+
+            <RelativeLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentBottom="true"
+                android:layout_marginStart="20dp"
+                android:background="@drawable/plus_minus"
+                android:layout_marginBottom="10dp">
+                <ImageView
+                    android:id="@+id/decrementWeightId"
+                    android:layout_width="30dp"
+                    android:layout_height="30dp"
+                    android:src="@drawable/minus"/>
+            </RelativeLayout>
+
+            <RelativeLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentBottom="true"
+                android:layout_marginEnd="20dp"
+                android:layout_alignParentEnd="true"
+                android:background="@drawable/plus_minus"
+                android:layout_marginBottom="10dp">
+                <ImageView
+                    android:id="@+id/incrementWeightId"
+                    android:layout_width="30dp"
+                    android:layout_height="30dp"
+                    android:src="@drawable/add"/>
+            </RelativeLayout>
+
+        </RelativeLayout>
+
+
+        <RelativeLayout
+        android:id="@+id/ageLayoutId"
+        android:layout_width="150dp"
+        android:layout_height="150dp"
+        android:layout_toEndOf="@id/centerVerticalLineId"
+        android:layout_below="@id/heightLayoutId"
+        android:layout_marginBottom="20dp"
+        android:layout_marginTop="85dp"
+        android:layout_marginLeft="20dp"
+        android:layout_marginRight="20dp"
+        android:background="@drawable/card_background">
+        <TextView
+            android:id="@+id/textAge"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Age"
+            android:layout_marginLeft="30dp"
+            android:textColor="#ffffff"
+            android:textStyle="bold"
+            android:textAlignment="center"
+            android:textSize="18sp"
+            android:layout_marginTop="15dp"/>
+
+            <Button
+                android:id="@+id/micOfAge"
+                android:layout_width="40dp"
+                android:layout_height="40dp"
+                android:text="Mic"
+                android:background="@drawable/button_background"
+                android:layout_marginTop="5dp"
+                android:layout_marginLeft="5dp"/>
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:id="@+id/currentAgeId"
+            android:text="20"
+            android:textColor="#ffffff"
+            android:textSize="30sp"
+            android:textStyle="bold"
+            android:layout_centerInParent="true"
+            android:textAlignment="center"/>
+
+        <RelativeLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentBottom="true"
+            android:layout_marginStart="20dp"
+            android:background="@drawable/plus_minus"
+            android:layout_marginBottom="10dp">
+            <ImageView
+                android:id="@+id/decrementAgeId"
+                android:layout_width="30dp"
+                android:layout_height="30dp"
+                android:src="@drawable/minus"/>
+        </RelativeLayout>
+
+        <RelativeLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentBottom="true"
+            android:layout_marginEnd="20dp"
+            android:layout_alignParentEnd="true"
+            android:background="@drawable/plus_minus"
+            android:layout_marginBottom="10dp">
+            <ImageView
+                android:id="@+id/incrementAgeId"
+                android:layout_width="30dp"
+                android:layout_height="30dp"
+                android:src="@drawable/add"/>
+        </RelativeLayout>
+
+    </RelativeLayout>
+
+
+
+
+
+
+        <android.widget.Button
+            android:id="@+id/calculateBmiButtonId"
+            android:layout_width="match_parent"
+            android:layout_height="40dp"
+            android:layout_alignParentBottom="true"
+            android:text="Calculate BMI"
+            android:textStyle="bold"
+            android:textSize="15sp"
+            android:layout_marginBottom="15dp"
+            android:layout_marginLeft="20dp"
+            android:layout_marginRight="20dp"
+            android:background="@drawable/button_background">
+
+        </android.widget.Button>
+
+
+
+
+</RelativeLayout>

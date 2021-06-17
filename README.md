@@ -10,7 +10,11 @@ In this app the user is given both options of entering the data both manually an
 
 Language -> Java
 
-[Click here to view Demo of my App](https://drive.google.com/drive/u/0/folders/1zkwjXc5R641XYpA2UgmfScvKK52lyEja")
+![bmiAppHomeScreen](https://user-images.githubusercontent.com/62887529/122362287-a289df80-cf75-11eb-9fdb-27fe064a86f3.jpeg)
+
+Demo of this app
+
+[Click here](https://drive.google.com/file/d/1zwX3_qlUsJc-ThjD7I-iIcOjme4_4fbQ/view)
 
 PS: There are few scenario where this app would crash :( but I tried to cover most of the test cases
 
